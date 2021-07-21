@@ -1,7 +1,50 @@
-import React from "react"
+import React, { useState } from "react"
+import "./App.css"
+import Book from "./components/Book"
+import Content from "./components/Content"
+import Header from "./components/Header"
+import Page from "./components/Page"
+import Title from "./components/Title"
+import Write from "./components/Write"
 
+/*
+[
+{
+id : 1,
+name : 박종혁,
+password : 1234,
+createdAt : new Date,
+title : 제목,
+content : 내용
+},
+{
+  ...
+}
+]
+
+*/
 function App() {
-  return <div>Hello World</div>
+  const [data, setData] = useState([])
+  console.log(data)
+  return (
+    <Page>
+      <Header>
+        <Title>방명록</Title>
+        <Write data={data} setData={setData} />
+      </Header>
+      <Content>
+        {data.map((book) => {
+          return (
+            <Book
+              title={book.title}
+              nickname={book.nickname}
+              content={book.content}
+            />
+          )
+        })}
+      </Content>
+    </Page>
+  )
 }
 
 export default App
