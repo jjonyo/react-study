@@ -6,7 +6,7 @@ const Page = (props) => {
 }
 
 const MyPage = styled.div`
-  padding: 30px;
+  margin: 50px;
 `
 
 export default Page

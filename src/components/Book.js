@@ -5,6 +5,7 @@ import styled from "styled-components"
 const { Title } = Typography
 const MyBook = styled.div`
   padding-top: 10px;
+  padding-bottom: 10px;
 `
 const confirmPassword = (data, setData, index) => {
   const inputPassword = prompt("비밀번호를 입력하세요.")
@@ -38,7 +39,7 @@ const Book = ({ data, setData, index, title, nickname, content }) => {
             <a href="#">삭제</a>
           </Popconfirm>
         }
-        style={{ width: 500 }}
+        style={{ width: 800 }}
       >
         <Title level={5}>작성자 : {nickname}</Title>
         <p>{content}</p>

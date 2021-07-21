@@ -33,7 +33,7 @@ const Write = ({ data, setData }) => {
   }
 
   return (
-    <>
+    <div style={{ textAlign: "right" }}>
       <Button type="primary" onClick={showModal}>
         작성하기
       </Button>
@@ -74,7 +74,7 @@ const Write = ({ data, setData }) => {
           </Form.Item>
         </Form>
       </Modal>
-    </>
+    </div>
   )
 }
 

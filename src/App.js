@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Divider } from "antd"
 import "./App.css"
 import Book from "./components/Book"
 import Content from "./components/Content"
@@ -7,22 +8,6 @@ import Page from "./components/Page"
 import Title from "./components/Title"
 import Write from "./components/Write"
 
-/*
-[
-{
-id : 1,
-name : 박종혁,
-password : 1234,
-createdAt : new Date,
-title : 제목,
-content : 내용
-},
-{
-  ...
-}
-]
-
-*/
 function App() {
   const [data, setData] = useState([])
   console.log(data)
@@ -32,6 +17,7 @@ function App() {
         <Title>방명록</Title>
         <Write data={data} setData={setData} />
       </Header>
+      <Divider />
       <Content>
         {data.map((book, index) => {
           return (
