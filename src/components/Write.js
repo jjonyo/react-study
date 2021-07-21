@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Modal, Button, Input, Form } from "antd"
+import { Modal, Button, Input, Form, message } from "antd"
 const { TextArea } = Input
 
 const Write = ({ data, setData }) => {
@@ -25,6 +25,7 @@ const Write = ({ data, setData }) => {
     }
     form.resetFields()
     await setData([...data, newData])
+    message.success("방명록이 등록되었습니다.")
   }
 
   const onFinishFailed = (errorInfo) => {

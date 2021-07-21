@@ -33,12 +33,15 @@ function App() {
         <Write data={data} setData={setData} />
       </Header>
       <Content>
-        {data.map((book) => {
+        {data.map((book, index) => {
           return (
             <Book
               title={book.title}
               nickname={book.nickname}
               content={book.content}
+              data={data}
+              setData={setData}
+              index={index}
             />
           )
         })}
