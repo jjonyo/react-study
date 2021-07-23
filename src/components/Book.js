@@ -39,7 +39,7 @@ const Book = ({ data, setData, index, title, nickname, content }) => {
             <a href="#">삭제</a>
           </Popconfirm>
         }
-        style={{ width: 800 }}
+        style={{ width: 600 }}
       >
         <Title level={5}>작성자 : {nickname}</Title>
         <p>{content}</p>
